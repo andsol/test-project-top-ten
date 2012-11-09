@@ -1,0 +1,32 @@
+<?php if($this->movies): ?>
+<div class="box-header">
+    <span class="glyph chart"></span>
+    <h1><?php echo $this->translate('Top 10') ?></h1>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th><?php echo $this->translate('Rank') ?></th>
+            <th><?php echo $this->translate('Rating') ?></th>
+            <th><?php echo $this->translate('Title') ?></th>
+            <th><?php echo $this->translate('Year') ?></th>
+            <th><?php echo $this->translate('Votes') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+       <?php foreach($this->movies as $movie): ?>
+      <tr>
+        <td><?php echo $movie['rank']?></td>
+        <td><?php echo $movie['rating']?></td>
+        <td><?php echo $movie['title']?></td>
+        <td><?php echo $movie['year']?></td>
+        <td><?php echo $movie['votes']?></td>
+      </tr>
+      <?php endforeach ?>
+    </tbody>
+</table>
+<?php else: ?>
+<div class="box-header">
+<h1><?php echo $this->translate('Input right date') ?></h1>
+</div>
+<?php endif ?>

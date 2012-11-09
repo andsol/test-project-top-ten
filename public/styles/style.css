@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+body, html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background: url("../images/bg.png") repeat scroll 0 0 transparent;
+    color: #666666;
+    font-family: "Aller","Lucida Grande",sans-serif;
+    font-size: 12px;
+    height: 100%;
+    min-width: 1024px;
+    width: 100%;
+}
+
+#main-area {
+	margin-left: 120px;
+	margin-right: 20px;
+}
+nav#primary {
+    background: url("../images/nav_bg.png") repeat scroll 0 0 transparent;
+    float: left;
+    height: 100%;
+    width: 100px;
+	margin: 0;
+	padding: 0;
+}
+nav#primary ul {
+	margin: 0;
+	padding: 0;
+}
+nav#primary ul li a {
+    color: #777777;
+    display: block;
+    font-size: 11px;
+    line-height: 32px;
+    padding: 7px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.2s linear 0s;
+}
+nav#primary ul li a span {
+    display: block;
+    font-size: 32px;
+    padding-top: 14px;
+}
+nav#primary ul li a:hover {
+    color: #EDEDED;
+}
+nav#primary ul li.active a {
+    color: #EDEDED;
+}
+nav#primary ul li.bottom a {
+    bottom: 7px;
+    position: absolute;
+    width: 100px;
+}
+nav#primary ul li a .icon32 {
+    height: 32px;
+    margin: 16px auto -6px;
+    padding: 0;
+    width: 32px;
+}
+nav#primary ul li a:hover .icon32, nav#primary ul li.active a .icon32 {
+    background-position: 100% center;
+}
+
+.box {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px;
+}
+.box-header {
+    background-color: #E5E5E5;
+    background-image: -moz-linear-gradient(center top , #EBEBEB, #E5E5E5);
+    border-top: 1px solid #FAFAFA;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 40px;
+}
+.box-header .glyph {
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    margin-right: -3px;
+    padding-left: 14px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.box-header .icon16 {
+    float: left;
+    height: 16px;
+    margin-left: 14px;
+    margin-right: -3px;
+    margin-top: 11px;
+    width: 16px;
+}
+.box-header h1 {
+	margin: 0;
+	padding: 0;
+    color: #898989;
+    float: left;
+    font-family: "Tahoma","Lucida Grande",sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 40px;
+    padding-left: 14px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+.box-content {
+    padding: 14px;
+}
+table {
+	width: 100%;
+}
+
+table td .prettyCheckbox {
+    position: absolute;
+}
+
+table tr {
+    border-bottom: 1px solid #EBEBEB;
+    border-top: 1px solid #FFFFFF;
+}
+thead tr {
+    border-top: medium none;
+}
+table tbody tr:last-child {
+    border-bottom: medium none;
+}
+tbody tr:nth-child(2n+1) {
+    background: none repeat scroll 0 0 #FDFDFD;
+}
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 3px;
+}
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 3px;
+}
+tbody tr td, thead tr th {
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #F4F4F4;
+    padding: 12px 14px;
+    position: relative;
+    text-align: left;
+}
+
+tbody tr td:last-child, thead tr th:last-child {
+    border-right: medium none;
+}
+tbody tr td:first-child, thead tr th:first-child {
+    border-left: medium none;
+}
+thead {
+    color: #898989;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+form > .column-left {
+    border-right: 1px solid #E1E1E1;
+    padding-right: 2%;
+}
+.column-left {
+    float: left;
+    width: 49%;
+}
+.column-right {
+    float: right;
+    width: 49%;
+}
+form .column-left, form .column-right {
+    width: 48%;
+}
+.clear {
+    clear: both;
+}
+.date-form {
+	padding: 20px;
+	width: 200px;
+	padding-left: 0;
+}
+
+p.description {
+	color: #477DAE;
+}
+form input[type="text"], form input[type="password"], form textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("../images/input_bg.png") repeat-x scroll 0 0 #FDFDFD;
+    border-color: #CCCCCC #D9D9D9 #D9D9D9;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-right: 1px solid #D9D9D9;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #FFFFFF;
+    color: #666666;
+    font-family: "Aller","Lucida Grande",sans-serif;
+    font-size: 12px;
+    outline: medium none;
+    padding: 6px 10px;
+    resize: none;
+    width: 100%;
+}
+
+input.button, button {
+    background: url("../images/buttongray_bg.png") repeat-x scroll 0 0 #EBEBEB;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px #DDDDDD;
+    color: #757575;
+    display: inline-block;
+    font-family: "Tahoma",sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    height: 31px;
+    line-height: 31px;
+    margin-right: 4px;
+    padding: 0 14px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #FFFFFF;
+    text-transform: uppercase;
+}
+form dd {
+	margin-left: 0;
+}
+form textarea {
+    height: 112px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding-top: 8px;
+}
+form div.combined {
+    position: relative;
+}
+form div.combined p {
+    display: inline-block;
+}
+form div.combined p input {
+    display: inline;
+}
+form div.combined p:first-child input {
+    border-bottom-right-radius: 0;
+    border-right: medium none;
+    border-top-right-radius: 0;
+}
+form div.combined p:first-child {
+    margin-right: -3px;
+}
+form div.combined p.last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+form div.combined p.last-child input {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+form p.small {
+    width: 25%;
+}
+form p.medium {
+    width: 51%;
+}
+form p.large {
+    width: 76%;
+}
+form p .icon {
+    position: absolute;
+    right: 8px;
+    top: 7px;
+}
+form p .icon.valid {
+    display: none;
+}
+form ul.errors {
+
+	padding: 0;
+	margin: 2px;
+	margin-left: 20px;
+}
+form ul.errors li {
+    color: #AD6262;
+}
+
+form label {
+    color: #666666;
+    line-height: 19px;
+    text-indent: 4px;
+}

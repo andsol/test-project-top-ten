@@ -1,0 +1,58 @@
+<?php echo $this->doctype() ?>
+<html>
+<head>
+<?php echo $this->headTitle() ?>
+<?php echo $this->headMeta() ?>
+<?php echo $this->headLink(array('rel' => 'favicon', 'href' => $this->baseUrl('images/favicon.ico'), 'type' => 'image/x-icon'))
+	->headLink(array('rel' => 'shortcut icon', 'href' => $this->baseUrl('images/favicon.ico'), 'type' => 'image/x-icon'))
+	->appendStylesheet($this->baseUrl('styles/normalize.css'))
+    ->appendStylesheet($this->baseUrl('styles/style.css'))
+    ->appendStylesheet($this->baseUrl('styles/fonts.css'))
+    ->appendStylesheet($this->baseUrl('js/jquery-ui/jquery.ui.custom.min.css'))
+    ?>
+<?php echo $this->headScript()
+    ->appendFile($this->baseUrl('js/jquery.js'), 'text/javascript')
+    ->appendFile($this->baseUrl('js/jquery.ui.custom.min.js'), 'text/javascript')
+    ?>
+<script type="text/javascript">
+$(function(){
+	bindForm();
+});
+
+bindForm = function(){
+	$('form').submit(function(event){
+		event.preventDefault();
+		$('#date').attr('disabled', 'disabled');
+		$('.box').stop().effect('fade', 'hide');
+		
+		$.getJSON('<?php echo $this->url(array('controller' => 'index', 'action' => 'index', 'module' => 'default')) ?>',
+			{date: $('#date').val()},
+			function(data){
+				$('form').replaceWith(data.form);
+				$('.box').html(data.table).hide().effect('fade', 'show');
+			    bindForm();
+			}
+		);
+	});
+    $('#date').datepicker({dateFormat: 'yy-mm-dd'});
+};
+
+</script>
+<?php echo $this->headStyle() ?>
+</head>
+<body>
+<nav id="primary">
+<ul>
+    <li>
+        <a href="//www.imdb.com/chart/top" target="_blank">
+           <span class="glyph info"></span>
+           <?php echo $this->translate('View at website') ?>
+        </a>
+    </li>
+</ul>
+</nav>
+<div id="main-area">
+<?php echo $this->layout()->content ?>
+</div>
+</body>
+</html>

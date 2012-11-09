@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+body, p, h1, h2, h3, h4, h5 {
+	color: black;
+	background: white;
+	background-image: none;
+}
+form, #print-button, #email-a-friend-button {
+	display: none;
+}
+div {
+	float: none;
+	clear: both;
+}
+a, a:hover, a:active, a:visited {
+	text-decoration: none;
+	color: black;
+}

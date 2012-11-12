@@ -23,5 +23,5 @@ get_include_path(),
 
 require_once 'Zend/Application.php';
 
-$application = new Zend_Application(APPLICATION_ENV, APPLICATION_PATH  . DS .  'configs' . DS . 'Application.ini');
+$application = new Zend_Application(APPLICATION_ENV, APPLICATION_PATH  . DS .  'configs' . DS . 'application.ini');
 $application->bootstrap()->run();

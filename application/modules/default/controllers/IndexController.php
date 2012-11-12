@@ -15,6 +15,7 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        
         $date = new Zend_Date();
         $currentDate = $date->toString('yyyy-MM-dd');
         $form = new Default_Form_Date();
